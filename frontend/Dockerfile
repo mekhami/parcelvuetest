@@ -1,7 +1,6 @@
 FROM node:latest
 
 WORKDIR /opt/app
-USER node
 
 EXPOSE 1234
 EXPOSE 1235
@@ -13,4 +12,4 @@ RUN yarn
 
 COPY . .
 
-CMD {"yarn", "start"]
+CMD yarn start

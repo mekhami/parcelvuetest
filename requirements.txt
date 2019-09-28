@@ -1,4 +1,5 @@
 -i https://pypi.org/simple
+django-environ==0.4.5
 django==2.2.5
 psycopg2==2.8.3
 pytz==2019.2

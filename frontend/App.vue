@@ -14,6 +14,6 @@ export default {
 
 <style lang="scss" scoped>
 p {
-  color: red;
+  color: blue;
 }
 </style>
