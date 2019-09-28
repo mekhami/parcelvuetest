@@ -5,7 +5,9 @@
 <script>
 export default {
   data () {
-    foo: 'bar'
+    return {
+      foo: 'bar'
+    }
   }
 }
 </script>

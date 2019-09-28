@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/opt/app
+      - /opt/app/node_modules
+    ports:
+      - 1234:1234
+      - 1235:1235
+
+  backend:
+    build: .
+    volumes:
+      - .:/opt/app/
+    stdin_open: true
+    tty: true
+    depends_on:
+      - postgres
+    ports:
+      - 8000:8000
+    env_file: .env
+
+  postgres:
+    image: postgres:latest
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file: .env
